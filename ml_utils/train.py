@@ -241,7 +241,8 @@ def evaluate(model, X_test, y_test, transform_fx=None, title="Model"):
         
         # Histogram of probabilities
         yt = pd.DataFrame(y_test).reset_index()
-        yt = yt.rename(columns={'target':'actual'})
+        t = yt.columns[1]
+        yt = yt.rename(columns={t:'actual'})
         yp = pd.DataFrame(y_pred_proba, columns=['predicted'])
 
         df_test = yt.merge(yp, left_index=True, right_index=True)
