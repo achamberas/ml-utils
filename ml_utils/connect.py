@@ -83,7 +83,7 @@ def get_simulation_jobs():
     df = bq_conn(sql)
     return df
 
-def get_training_data(db_config, schema_table, target):
+def get_training_data(db_config, query_string, target):
 
     DB_DRIVER=db_config['DB_DRIVER']
     DB_USER=db_config['DB_USER']
@@ -95,13 +95,8 @@ def get_training_data(db_config, schema_table, target):
     engine = create_engine(f'{DB_DRIVER}://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}')
     conn = engine.connect()
 
-    query_string = f"""
-        SELECT * 
-        FROM {schema_table}
-    """
-
     df = pd.read_sql(query_string, conn)
     conn.close()
 
-    df[target] = df[config['target']].astype(float)
+    df[target] = df[target].astype(float)
     return df
