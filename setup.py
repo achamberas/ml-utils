@@ -26,6 +26,8 @@ setup(
                         'dill',
                         'pandas_gbq',
                         'db-dtypes',
+                        'SQLAlchemy==2.0.30',
+                        'psycopg2==2.9.9'
                       ],
 
     classifiers=[
