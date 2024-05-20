@@ -1,0 +1,38 @@
+from setuptools import setup
+
+setup(
+    name='libs',
+    version='0.1.0',    
+    description='Utilities for ML pipelines',
+    url='https://github.com/shuds13/pyexample',
+    author='Anthony Chamberas',
+    author_email='achamberas@autocase.com',
+    license='BSD 2-clause',
+    packages=['libs'],
+    install_requires=['datetime',
+                        'pytz',
+                        'pandas',
+                        'google-auth',
+                        'google-auth-oauthlib ',
+                        'google-cloud-core',
+                        'google-cloud-bigquery',
+                        'numpy',
+                        'pickleshare',
+                        'matplotlib',
+                        'regex',
+                        'scikit-learn',
+                        'scipy',
+                        'mlflow',
+                        'dill',
+                        'pandas_gbq',
+                        'db-dtypes',
+                      ],
+
+    classifiers=[
+        'Development Status :: 1 - Planning',
+        'Intended Audience :: Science/Research',
+        'License :: OSI Approved :: BSD License',  
+        'Operating System :: POSIX :: Linux',
+        'Programming Language :: Python :: 3.9',
+    ],
+)
