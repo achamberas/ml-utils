@@ -8,7 +8,7 @@ setup(
     author='Anthony Chamberas',
     author_email='anthony@four37.net',
     license='BSD 2-clause',
-    packages=['libs'],
+    packages=['ml_utils'],
     install_requires=['datetime',
                         'pytz',
                         'pandas',
