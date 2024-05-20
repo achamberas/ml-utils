@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='ml-utils',
+    name='ml_utils',
     version='0.1.0',    
     description='Utilities for ML pipelines',
     url='https://github.com/achamberas/ml-utils',
